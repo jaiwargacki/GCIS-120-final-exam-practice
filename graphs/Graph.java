@@ -1,4 +1,4 @@
-package Practice1.graphs;
+package graphs;
 
 
 import java.util.List;
