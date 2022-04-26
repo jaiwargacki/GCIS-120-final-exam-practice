@@ -15,9 +15,9 @@ in order to simulate a very small version of the game.
    A movie should have a method that can add an actor to the collection and another 
    that checks to see if an actor is in the collection.
 
-3. Create BaconGame.java. Complete the main method so that is creates a few movies, 
-   adds some actors to those movies, and then populates a graph. The graph should have actors,
-   every actor should be connect to every other actor they appear in the same movie.
+3. Open BaconGame.java. Using the code provided to you, complete the main method. 
+   The graph should have actors, every actor should be connect to every 
+   other actor they appear in the same movie.
 
    You should have atleast 3 movies and atleast 3 actors per movie. If you are having 
    trouble filling the graph, I would suggest Starwars episodes 4-6.

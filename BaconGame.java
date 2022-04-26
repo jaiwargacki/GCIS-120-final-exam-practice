@@ -1,4 +1,4 @@
-package Practice1.solution;
+
 
 public class BaconGame {
 
