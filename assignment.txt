@@ -15,12 +15,12 @@ in order to simulate a very small version of the game.
    A movie should have a method that can add an actor to the collection and another 
    that checks to see if an actor is in the collection.
 
+   Movie should be iterable so that a for each loop can be used to iterate through
+   the movie's actors.
+
 3. Open BaconGame.java. Using the code provided to you, complete the main method. 
    The graph should have actors, every actor should be connect to every 
    other actor they appear in the same movie.
-
-   You should have atleast 3 movies and atleast 3 actors per movie. If you are having 
-   trouble filling the graph, I would suggest Starwars episodes 4-6.
 
 4. Using the provided methods in AdjListGraph.java, create a method that determines if 
    there is a path between two actors. Demonstrate this method by calling it from the main.
