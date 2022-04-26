@@ -8,7 +8,7 @@ In this assignment you will use the provided classes, and a few classes you crea
 in order to simulate a very small version of the game.
 
 1. Create a class called Actor. An actor has a private name and getter method for it.
-   Create an equals and toString method for this class.
+   Create an equals, a hashcode, and toString method for this class.
 
 2. Create a class called Movie. A movie has a private name and a collection of actors. 
    Choose a representation for this data that is efficient and easy to work with.
@@ -18,6 +18,9 @@ in order to simulate a very small version of the game.
 3. Create BaconGame.java. Complete the main method so that is creates a few movies, 
    adds some actors to those movies, and then populates a graph. The graph should have actors,
    every actor should be connect to every other actor they appear in the same movie.
+
+   You should have atleast 3 movies and atleast 3 actors per movie. If you are having 
+   trouble filling the graph, I would suggest Starwars episodes 4-6.
 
 4. Using the provided methods in AdjListGraph.java, create a method that determines if 
    there is a path between two actors. Demonstrate this method by calling it from the main.
