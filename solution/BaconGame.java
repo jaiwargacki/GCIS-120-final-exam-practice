@@ -1,22 +1,22 @@
+package solution;
+
 import graphs.AdjacencyGraph;
 import graphs.Graph;
 
 public class BaconGame {
 
-    public static void createConnections(Graph<Actor> graph, Movie movie) {
+    private static void addMovie(Graph<Actor> graph, Movie movie) {
         for (Actor a1 : movie) {
+            graph.add(a1);
             for (Actor a2 : movie) {
-                /* if (!a1.equals(a2) && !graph.connected(a1, a2)) {
-                    graph.connectUndirected(a1, a2); // one possibility 
-                } */
-                if (!a1.equals(a2)) {
-                    graph.connectDirected(a1, a2);
+                if (!a1.equals(a2) && graph.contains(a2) && !graph.connected(a1, a2)) {
+                    graph.connectUndirected(a1, a2);;
                 }
             }
         }
     }
 
-    public static boolean hasConnection(Actor a1, Actor a2, Graph<Actor> graph) {
+    private static boolean areInSameMovie(Graph<Actor> graph, Actor a1, Actor a2) {
         return graph.connected(a1, a2);
     }
 
@@ -46,25 +46,14 @@ public class BaconGame {
         movie3.addActor(actor6);
         movie3.addActor(actor7);
 
-        // Create a graph
-        Graph<Actor> graph = new AdjacencyGraph<>();
+        // Populate the graph
+        Graph<Actor> graph = new AdjacencyGraph<Actor>();
+        addMovie(graph, movie1);
+        addMovie(graph, movie2);
+        addMovie(graph, movie3);
 
-        // Add all the actors
-        graph.add(actor1);
-        graph.add(actor2);
-        graph.add(actor3);
-        graph.add(actor4);
-        graph.add(actor5);
-        graph.add(actor6);
-        graph.add(actor7);
-
-        // Connect all the actors who appear movie
-        createConnections(graph, movie1);
-        createConnections(graph, movie2);
-        createConnections(graph, movie3);
-
-        System.out.println(actor3 + " has connetion with " + actor5 + "? - " 
-            + hasConnection(actor3, actor5, graph));
+        System.out.println(areInSameMovie(graph, actor1, actor2));
+        System.out.println(areInSameMovie(graph, actor5, actor3));
     }
     
 }
